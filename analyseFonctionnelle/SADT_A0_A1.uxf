@@ -4,13 +4,14 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>50</y>
-      <w>420</w>
+      <x>550</x>
+      <y>230</y>
+      <w>180</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>
-Se rendre du point de départ au point d'arrivée
+    <panel_attributes>Se rendre 
+du point de départ 
+au point d'arrivée
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -18,43 +19,44 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>40</y>
-      <w>190</w>
+      <x>360</x>
+      <y>220</y>
+      <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-position de départ</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+position courante (n)</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>70</y>
-      <w>190</w>
+      <x>360</x>
+      <y>250</y>
+      <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 position d'arrivée</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>750</x>
-      <y>60</y>
-      <w>190</w>
-      <h>40</h>
+      <x>720</x>
+      <y>260</y>
+      <w>180</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-position courante</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+distance 
+parcourue</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>20</x>
+      <x>60</x>
       <y>230</y>
       <w>50</w>
       <h>90</h>
@@ -66,8 +68,8 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>110</x>
-      <y>160</y>
+      <x>170</x>
+      <y>490</y>
       <w>1050</w>
       <h>30</h>
     </coordinates>
@@ -77,8 +79,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>610</x>
-      <y>360</y>
+      <x>1060</x>
+      <y>890</y>
       <w>100</w>
       <h>40</h>
     </coordinates>
@@ -90,14 +92,15 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>340</y>
+      <x>760</x>
+      <y>870</y>
       <w>140</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>
 Calculer 
 le mouvement
+à effectuer
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -105,62 +108,64 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
-      <y>360</y>
-      <w>160</w>
+      <x>890</x>
+      <y>890</y>
+      <w>190</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 consigne 
-mouvement</panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+vecteur vitesse</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>360</y>
+      <x>1150</x>
+      <y>890</y>
       <w>140</w>
-      <h>40</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-déplacement</panel_attributes>
+déplacement
+effectif</panel_attributes>
     <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>340</y>
-      <w>190</w>
+      <x>160</x>
+      <y>710</y>
+      <w>310</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-position de départ</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+position courante (n)</panel_attributes>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
-      <y>370</y>
-      <w>190</w>
+      <x>620</x>
+      <y>920</y>
+      <w>160</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 position d'arrivée</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>470</y>
+      <x>160</x>
+      <y>630</y>
       <w>140</w>
-      <h>50</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Estimer 
 le déplacement
+effectué
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -168,14 +173,15 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>460</y>
-      <w>160</w>
-      <h>70</h>
+      <x>450</x>
+      <y>640</y>
+      <w>110</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>
-Calculer position
-courante
+Calculer 
+la nouvelle
+position
 
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -183,44 +189,33 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>790</x>
-      <y>470</y>
-      <w>190</w>
+      <x>150</x>
+      <y>870</y>
+      <w>630</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
-position courante</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+position courante (n)</panel_attributes>
+    <additional_attributes>10.0;20.0;610.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
-      <y>470</y>
-      <w>190</w>
+      <x>290</x>
+      <y>640</y>
+      <w>180</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-déplacement réel</panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>260</x>
-      <y>400</y>
-      <w>620</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;10.0;10.0;40.0;600.0;40.0;600.0;90.0</additional_attributes>
+déplacement estimé</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
+      <x>60</x>
+      <y>0</y>
       <w>50</w>
       <h>90</h>
     </coordinates>
@@ -231,8 +226,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>210</y>
+      <x>510</x>
+      <y>750</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -244,13 +239,337 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>240</y>
-      <w>150</w>
-      <h>120</h>
+      <x>620</x>
+      <y>750</y>
+      <w>190</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-position obstacles</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+position des obstacles</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0;170.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>290</x>
+      <y>540</y>
+      <w>590</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>On note que, dans cette vision du robot,
+il peut y avoir un écart entre le déplacement effectif et le déplacement estimé.
+Cette erreur devra être la plus petite possible.
+De plus elle se cumulera dans le temps.
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>1000</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Donner consigne
+vecteur vitesse
+(mode manuel)
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>900</y>
+      <w>170</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;130.0;70.0;130.0;70.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>220</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Donner consigne
+position d'arrivée
+(mode semi-auto)
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>10</y>
+      <w>420</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+Couvrir une zone
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>240</y>
+      <w>110</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>
+
+Calculer 
+la surface 
+couverte
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>70</y>
+      <w>1050</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;1030.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>370</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Elaborer une stratégie
+de balayage de la zone
+restant à couvrir
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>260</y>
+      <w>140</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+</panel_attributes>
+    <additional_attributes>10.0;150.0;70.0;150.0;70.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>290</y>
+      <w>1100</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+total zone couverte</panel_attributes>
+    <additional_attributes>1050.0;10.0;1080.0;10.0;1080.0;160.0;10.0;160.0;10.0;140.0;40.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>320</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Connaitre
+largeur robot
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>320</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+largeur robot</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>270</y>
+      <w>120</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Mémoriser 
+la surface 
+totale couverte
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>280</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+surface 
+couverte</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>160</y>
+      <w>300</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+position courante (n+1)</panel_attributes>
+    <additional_attributes>200.0;90.0;280.0;90.0;280.0;20.0;10.0;20.0;10.0;80.0;20.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>70</x>
+      <y>510</y>
+      <w>90</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>A2
+Se rendre 
+du point A 
+au point B
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>150</x>
+      <y>90</y>
+      <w>760</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>On note que, dans cette vision du robot,
+on ne tient pas compte des obstacles.
+On ne les mémorise pas -&gt; surface jamais couverte entierement -&gt; pas de fin... (à développer)
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1310</x>
+      <y>280</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Informer
+zone couverte
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1220</x>
+      <y>280</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+total zone
+couverte</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>670</y>
+      <w>660</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+position courante (n+1)</panel_attributes>
+    <additional_attributes>10.0;20.0;640.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>250</x>
+      <y>300</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Détecter les
+obstacles
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>330</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+position des obstacles</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>740</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Donner consigne
+mode de déplacement
+(sportif/écolo/etc...)
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>750</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+mode déplacement</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0;10.0;120.0</additional_attributes>
   </element>
 </diagram>
