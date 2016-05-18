@@ -52,18 +52,6 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>630</x>
-      <y>200</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>RPi
-bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
       <x>320</x>
       <y>340</y>
       <w>120</w>
@@ -161,17 +149,6 @@ drawArc(0,0,width,height,0,180,true) fg=black  //Parameters (x, y, width, height
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
-      <y>220</y>
-      <w>70</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;30.0;50.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>350</x>
       <y>230</y>
       <w>70</w>
@@ -195,18 +172,6 @@ drawArc(0,0,width,height,0,180,true) fg=black  //Parameters (x, y, width, height
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>590</x>
-      <y>220</y>
-      <w>50</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>FC3
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
       <x>300</x>
       <y>420</y>
       <w>450</w>
@@ -218,7 +183,7 @@ bg=gray
 
 FC1 : Permettre une interraction avec un opérateur
 FC2 : Tenir compte du budget restraint
-FC3 : Utiliser une RPi comme intelligence</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

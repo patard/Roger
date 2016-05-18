@@ -9,10 +9,9 @@
       <w>180</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>Se rendre 
-du point de départ 
+    <panel_attributes>Se rendre
+du point de départ
 au point d'arrivée
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -49,7 +48,7 @@ position d'arrivée</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-distance 
+distance
 parcourue</panel_attributes>
     <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
@@ -85,7 +84,6 @@ bg=blue</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>Se déplacer
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -98,10 +96,9 @@ bg=yellow</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>
-Calculer 
+Calculer
 le mouvement
 à effectuer
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -114,7 +111,7 @@ bg=yellow</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 vecteur vitesse</panel_attributes>
     <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
@@ -163,10 +160,9 @@ position d'arrivée</panel_attributes>
       <w>140</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>Estimer 
+    <panel_attributes>Estimer
 le déplacement
 effectué
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -179,10 +175,9 @@ bg=yellow</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>
-Calculer 
+Calculer
 la nouvelle
 position
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -192,10 +187,9 @@ bg=yellow</panel_attributes>
       <x>150</x>
       <y>870</y>
       <w>630</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-
 position courante (n)</panel_attributes>
     <additional_attributes>10.0;20.0;610.0;20.0</additional_attributes>
   </element>
@@ -274,7 +268,6 @@ bg=gray</panel_attributes>
     <panel_attributes>Donner consigne
 vecteur vitesse
 (mode manuel)
-
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -300,7 +293,6 @@ bg=pink</panel_attributes>
     <panel_attributes>Donner consigne
 position d'arrivée
 (mode semi-auto)
-
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -314,7 +306,6 @@ bg=pink</panel_attributes>
     </coordinates>
     <panel_attributes>
 Couvrir une zone
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -327,11 +318,9 @@ bg=yellow</panel_attributes>
       <h>130</h>
     </coordinates>
     <panel_attributes>
-
-Calculer 
-la surface 
+Calculer
+la surface
 couverte
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -339,7 +328,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>160</x>
-      <y>70</y>
+      <y>110</y>
       <w>1050</w>
       <h>30</h>
     </coordinates>
@@ -357,7 +346,6 @@ bg=yellow</panel_attributes>
     <panel_attributes>Elaborer une stratégie
 de balayage de la zone
 restant à couvrir
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -395,7 +383,6 @@ total zone couverte</panel_attributes>
     </coordinates>
     <panel_attributes>Connaitre
 largeur robot
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -419,10 +406,9 @@ largeur robot</panel_attributes>
       <w>120</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>Mémoriser 
-la surface 
+    <panel_attributes>Mémoriser
+la surface
 totale couverte
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -435,7 +421,7 @@ bg=yellow</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-surface 
+surface
 couverte</panel_attributes>
     <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
   </element>
@@ -460,24 +446,10 @@ position courante (n+1)</panel_attributes>
       <h>80</h>
     </coordinates>
     <panel_attributes>A2
-Se rendre 
-du point A 
+Se rendre
+du point A
 au point B
 bg=blue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>150</x>
-      <y>90</y>
-      <w>760</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>On note que, dans cette vision du robot,
-on ne tient pas compte des obstacles.
-On ne les mémorise pas -&gt; surface jamais couverte entierement -&gt; pas de fin... (à développer)
-bg=gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -490,7 +462,6 @@ bg=gray</panel_attributes>
     </coordinates>
     <panel_attributes>Informer
 zone couverte
-
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -513,37 +484,11 @@ couverte</panel_attributes>
       <x>550</x>
       <y>670</y>
       <w>660</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-
-position courante (n+1)</panel_attributes>
-    <additional_attributes>10.0;20.0;640.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>250</x>
-      <y>300</y>
-      <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Détecter les
-obstacles
-bg=orange</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>300</x>
-      <y>330</y>
-      <w>180</w>
-      <h>60</h>
-    </coordinates>
     <panel_attributes>lt=-&gt;
-position des obstacles</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+position courante (n+1)</panel_attributes>
+    <additional_attributes>10.0;20.0;640.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -556,7 +501,6 @@ position des obstacles</panel_attributes>
     <panel_attributes>Donner consigne
 mode de déplacement
 (sportif/écolo/etc...)
-
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -571,5 +515,44 @@ bg=pink</panel_attributes>
     <panel_attributes>lt=-&gt;
 mode déplacement</panel_attributes>
     <additional_attributes>170.0;20.0;10.0;20.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>370</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+zone à
+couvrir</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>20</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+zone à
+couvrir</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>20</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+total zone
+couverte</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
   </element>
 </diagram>

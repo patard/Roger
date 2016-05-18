@@ -9,7 +9,7 @@
       <w>100</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>A2
+    <panel_attributes>A3
 Se déplacer
 bg=blue</panel_attributes>
     <additional_attributes/>
@@ -22,9 +22,8 @@ bg=blue</panel_attributes>
       <w>100</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Stocker de 
+    <panel_attributes>Stocker de
 l'énergie
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -39,7 +38,6 @@ bg=yellow</panel_attributes>
     <panel_attributes>
 Déterminer
 orientation
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -75,11 +73,10 @@ position d'arrivée</panel_attributes>
       <w>140</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>Mesurer 
+    <panel_attributes>Mesurer
 la contribution
-de chaque vecteur 
+de chaque vecteur
 de mouvement
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -94,7 +91,6 @@ bg=yellow</panel_attributes>
     <panel_attributes>
 Convertir l'énergie
 en mouvement
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -130,7 +126,7 @@ déplacement réel</panel_attributes>
       <w>100</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>A2
+    <panel_attributes>A3
 Estimer le
 déplacement
 réel
@@ -169,7 +165,6 @@ bg=blue</panel_attributes>
     </coordinates>
     <panel_attributes>Extrapoler
 déplacement
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -196,9 +191,8 @@ déplacement</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>Mesurer position
-par rapport 
+par rapport
 point de référence
-
 bg=yellow
 </panel_attributes>
     <additional_attributes/>
@@ -224,8 +218,8 @@ mesures</panel_attributes>
       <w>110</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>A2
-Calculer 
+    <panel_attributes>A3
+Calculer
 le mouvement
 à effectuer
 bg=blue</panel_attributes>
@@ -242,7 +236,6 @@ bg=blue</panel_attributes>
     <panel_attributes>
 Déterminer
 vitesse
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -251,7 +244,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>470</x>
       <y>870</y>
-      <w>150</w>
+      <w>140</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -278,7 +271,7 @@ position obstacles</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 vecteur vitesse</panel_attributes>
     <additional_attributes>10.0;20.0;330.0;20.0</additional_attributes>
   </element>
@@ -299,7 +292,7 @@ vecteur vitesse</panel_attributes>
     <coordinates>
       <x>470</x>
       <y>1080</y>
-      <w>150</w>
+      <w>140</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -312,10 +305,9 @@ position obstacles</panel_attributes>
       <x>250</x>
       <y>1170</y>
       <w>190</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-
 position courante (n)</panel_attributes>
     <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
@@ -340,7 +332,7 @@ position d'arrivée</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 vecteur vitesse</panel_attributes>
     <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
@@ -366,7 +358,7 @@ effectif</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>A3
-Convertir 
+Convertir
 l'énergie
 en mouvement
 bg=blue</panel_attributes>
@@ -381,7 +373,7 @@ bg=blue</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 vecteur vitesse</panel_attributes>
     <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
@@ -408,8 +400,7 @@ effectif</panel_attributes>
     </coordinates>
     <panel_attributes>Calculer consigne
 tension à
-appliquer 
-
+appliquer
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -422,7 +413,7 @@ bg=yellow</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 tension</panel_attributes>
     <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
@@ -431,7 +422,7 @@ tension</panel_attributes>
     <coordinates>
       <x>770</x>
       <y>230</y>
-      <w>140</w>
+      <w>130</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -448,14 +439,13 @@ du module 1</panel_attributes>
       <h>190</h>
     </coordinates>
     <panel_attributes>
-Calculer 
+Calculer
 la
 composante
 vitesse
-de chaque 
+de chaque
 module
 mouvement
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -494,7 +484,7 @@ module N</panel_attributes>
       <h>70</h>
     </coordinates>
     <panel_attributes>caractéristiques du module =
-diamètre roue, 
+diamètre roue,
 vitesse rotation moteur
 bg=gray</panel_attributes>
     <additional_attributes/>
@@ -509,8 +499,7 @@ bg=gray</panel_attributes>
     </coordinates>
     <panel_attributes>Calculer consigne
 tension à
-appliquer 
-
+appliquer
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -519,7 +508,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>770</x>
       <y>370</y>
-      <w>140</w>
+      <w>130</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -536,7 +525,7 @@ du module N</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne 
+consigne
 tension</panel_attributes>
     <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
@@ -549,8 +538,7 @@ tension</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>Effectuer
-rotation 
-
+rotation
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -563,8 +551,7 @@ bg=yellow</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>Effectuer
-rotation 
-
+rotation
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -573,7 +560,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>1040</x>
       <y>240</y>
-      <w>80</w>
+      <w>70</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -585,7 +572,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>1040</x>
       <y>380</y>
-      <w>80</w>
+      <w>70</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -602,7 +589,6 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>Faire
 la somme
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -611,7 +597,7 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>1070</x>
       <y>320</y>
-      <w>180</w>
+      <w>170</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -623,7 +609,7 @@ déplacement 1</panel_attributes>
     <coordinates>
       <x>1070</x>
       <y>390</y>
-      <w>180</w>
+      <w>170</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -686,10 +672,9 @@ position d'arrivée</panel_attributes>
       <x>250</x>
       <y>1350</y>
       <w>180</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-
 position courante (n)</panel_attributes>
     <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
@@ -698,7 +683,7 @@ position courante (n)</panel_attributes>
     <coordinates>
       <x>460</x>
       <y>1270</y>
-      <w>150</w>
+      <w>140</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -714,7 +699,7 @@ position obstacles</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-consigne  scalaire 
+consigne scalaire
 du vecteur vitesse</panel_attributes>
     <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
@@ -727,9 +712,8 @@ du vecteur vitesse</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>Prévoir
-obstacle 
+obstacle
 sur trajectoire
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -742,7 +726,7 @@ bg=yellow</panel_attributes>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-obstacle 
+obstacle
 sur trajectoire ?</panel_attributes>
     <additional_attributes>10.0;20.0;110.0;20.0;110.0;150.0</additional_attributes>
   </element>
@@ -755,7 +739,6 @@ sur trajectoire ?</panel_attributes>
       <h>60</h>
     </coordinates>
     <panel_attributes>Asservir vitesse
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -777,10 +760,9 @@ position d'arrivée</panel_attributes>
       <x>450</x>
       <y>1510</y>
       <w>180</w>
-      <h>50</h>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-
 position courante (n)</panel_attributes>
     <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
   </element>
@@ -789,7 +771,7 @@ position courante (n)</panel_attributes>
     <coordinates>
       <x>690</x>
       <y>1390</y>
-      <w>140</w>
+      <w>130</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -805,12 +787,10 @@ asservissement</panel_attributes>
       <w>360</w>
       <h>100</h>
     </coordinates>
-    <panel_attributes>Les modes de déplacements peuvent être 
+    <panel_attributes>Les modes de déplacements peuvent être
 - mode sportif/ecolo/etc...
-
 Les consignes d'asservissement sont:
 - Kp,Kd et Ki
-
 bg=gray</panel_attributes>
     <additional_attributes/>
   </element>
@@ -831,7 +811,7 @@ mode déplacement</panel_attributes>
     <coordinates>
       <x>710</x>
       <y>1270</y>
-      <w>160</w>
+      <w>150</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
@@ -846,10 +826,9 @@ mode déplacement</panel_attributes>
       <w>130</w>
       <h>60</h>
     </coordinates>
-    <panel_attributes>Interpréter 
-les modes de 
+    <panel_attributes>Interpréter
+les modes de
 déplacement
-
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
