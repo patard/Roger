@@ -150,97 +150,61 @@ void decodeMessage(byte* p_pMsgBuffer,
   {
     case DEFINE_ENCODER_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => DefineEncoderMsg");
-#endif
         defineEncoderMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case GET_ENCODER_COUNTER_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => GetEncoderCounterMsg");
-#endif
         getEncoderCounterMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case PIN_MODE_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => PinModerMsg");
-#endif
         pinModeMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case DIGITAL_WRITE_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => DigitalWriteMsg");
-#endif
         digitalWriteMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case DIGITAL_WRITES_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => DigitalWritesMsg");
-#endif
         digitalWritesMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case ANALOG_WRITE_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => AnalogWriteMsg");
-#endif
         analogWriteMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case GET_IDL_VERSION_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => GetIdlVersionMsg");
-#endif
         getIdlVersionMsg_received();
         break;
       }
     case GET_SOFT_VERSION_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => GetSoftVersionMsg");
-#endif
         getSoftVersionMsg_received();
         break;
       }
     case GET_STATUS_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => GetStatusMsg");
-#endif
         getStatusMsg_received();
         break;
       }
     case GET_TYPE_ARDUINO_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => GetArduinoTypeMsg");
-#endif
         getTypeArduinoMsg_received();
         break;
       }
     case DIGITAL_READ_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => digitaleReadMsg_received");
-#endif
         digitaleReadMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
     case ANALOG_READ_MSG_ID:
       {
-#ifdef _DEBUG_
-        Serial.println(" => analogReadMsg_received");
-#endif
         analogReadMsg_received(p_pMsgBuffer, p_BufferSize);
         break;
       }
@@ -345,18 +309,10 @@ void defineEncoderMsg_received(byte* p_pData, int p_MsgSize)
   pinMode(p_pData[2], INPUT_PULLUP);
   pinMode(p_pData[3], INPUT_PULLUP);
 
-#ifdef _USE_PCINPORT_
-  PCintPort::attachInterrupt(p_pData[2], g_pEncoderTab[l_EncoderId].ptr_InterruptA, CHANGE);
-  PCintPort::attachInterrupt(p_pData[3], g_pEncoderTab[l_EncoderId].ptr_InterruptB, CHANGE);
-  Serial.print("PCintPort::attachInterrupt "); Serial.println(p_pData[2]);
-  Serial.print("PCintPort::attachInterrupt "); Serial.println(p_pData[3]);
-#else
   attachInterrupt(digitalPinToInterrupt(p_pData[2]), g_pEncoderTab[l_EncoderId].ptr_InterruptA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(p_pData[3]), g_pEncoderTab[l_EncoderId].ptr_InterruptB, CHANGE);
   Serial.print("attachInterrupt "); Serial.println(p_pData[2]);
   Serial.print("attachInterrupt "); Serial.println(p_pData[3]);
-#endif
-
 }
 
 #define INPUT_PIN_MODE 0
