@@ -25,26 +25,6 @@ GET_IDL_VERSION_MSG_ID = 0x0C
 INPUT_PIN_MODE  = 0
 OUTPUT_PIN_MODE = 1
 PULLUP_PIN_MODE = 2
-
-DIGITAL_LOW  = 0
-DIGITAL_HIGH = 1
-
-RIGHT_WHEEL = 5
-DIR_RIGHT_WHEEL = 23
-LEFT_WHEEL = 4
-DIR_LEFT_WHEEL = 22
-
-DIR_FORWARD = 1
-DIR_BACKWARD = 0
-
-CMD_RIGHT_WHEEL = 0
-CMD_LEFT_WHEEL = 0
-
-ENCODER_RIGHT = 0
-ENCODER_LEFT = 1
-
-_PI_ = 3.1415926535897932384626
-
     
     
 def getIdlVersion():
@@ -133,52 +113,5 @@ def analogRead(p_Pin):
 
 
 
-    
-##try:
-        
-
-print "\n==========================="
-print "   IDL_VERSION"
-print "==========================="
-idlVersion = getIdlVersion()
-print "arduino has sent idlVersion : ", idlVersion
-
-
-print "\n==========================="
-print "   ANALOG_WRITE"
-print "==========================="
-print "analogWrite(9,255) "
-analogWrite(RIGHT_WHEEL, CMD_RIGHT_WHEEL)
-analogWrite(LEFT_WHEEL, CMD_LEFT_WHEEL)
-digitalWrite(DIR_RIGHT_WHEEL, DIR_FORWARD)
-digitalWrite(DIR_LEFT_WHEEL, DIR_FORWARD)
-
-time.sleep (1)
-#analogWrite(RIGHT_WHEEL, CMD_RIGHT_WHEEL + 20)
-#analogWrite(LEFT_WHEEL, CMD_LEFT_WHEEL + 20)
-
-# definition encoder
-sendEncodersettings(ENCODER_LEFT, 2, 3)
-sendEncodersettings(ENCODER_RIGHT, 18, 19)
-
-distL = 0
-distR = 0
-
-while True:
-	time.sleep(0.3)
-	encodL = getEncoderCounter(ENCODER_LEFT)
-	encodR = getEncoderCounter(ENCODER_RIGHT)
-	encodL /= 2652.0
-	encodR /= 2652.0
-	distL = encodL * 13.5 * _PI_ 
-	distR = encodR * 13.5 * _PI_
-	print "DistL : " , distL
-	print "DistR : ", distR
-	
-
-print
-
-##except:
-##    print "finish"
 
 
