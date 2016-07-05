@@ -1,6 +1,5 @@
 #include <Wire.h>
 
-#define _USE_PCINPORT_ 1
 
 #ifdef _USE_PCINPORT_
 #include <PinChangeInt.h>
@@ -223,9 +222,9 @@ void encoderItA(EncoderStruct* p_pEncoder)
   p_pEncoder->prevCptA = p_pEncoder->cptA;
   p_pEncoder->cptA = digitalRead(p_pEncoder->pinA);
   if (p_pEncoder->cptA == p_pEncoder->prevCptB) {
-    p_pEncoder->tick_counter--;
+    p_pEncoder->tick_counter++;
   }
-  else p_pEncoder->tick_counter++;
+  else p_pEncoder->tick_counter--;
 }
 
 
@@ -234,9 +233,9 @@ void encoderItB(EncoderStruct* p_pEncoder)
   p_pEncoder->prevCptB = p_pEncoder->cptB;
   p_pEncoder->cptB = digitalRead(p_pEncoder->pinB);
   if (p_pEncoder->prevCptA == p_pEncoder->cptB) {
-    p_pEncoder->tick_counter++;
+    p_pEncoder->tick_counter--;
   }
-  else p_pEncoder->tick_counter--;
+  else p_pEncoder->tick_counter++;
 }
 
 
@@ -410,6 +409,7 @@ void getEncoderCounterMsg_received(byte* p_pData, int p_MsgSize)
     l_pBuffer[2] = l_Counter & 0xFF;
 
     prepareMsg2Send(l_pBuffer, 3);
+    g_pEncoderTab[g_EncoderCounterIdRequest].tick_counter = 0;
   }
 
 }

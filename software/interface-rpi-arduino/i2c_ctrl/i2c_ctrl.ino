@@ -205,6 +205,7 @@ void getEncoderCounterMsg_received(byte* p_pData, int p_MsgSize)
     l_pBuffer[2] = l_Counter & 0xFF;
 
     prepareMsg2Send(l_pBuffer, 3);
+    g_pEncoderTab[g_EncoderCounterIdRequest].tick_counter = 0;
   }
 }
 
