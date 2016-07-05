@@ -38,8 +38,6 @@ def compute(delta_t):
   
 	cptL = interface_i2c.getEncoderCounter(robot.encoder_left_Id)
 	cptR = interface_i2c.getEncoderCounter(robot.encoder_right_Id)
-	print 'cptL : ', cptL, ' cptR : ', cptR
-
      
 	cptL /= robot.encoderResolution
 	cptR /= robot.encoderResolution
@@ -49,16 +47,3 @@ def compute(delta_t):
 	distance_M += (distance_L + distance_R) / 2.0
 
 
-# test odometry
-
-distL = 0
-distR = 0
-
-robot.init()
-
-while True:
-	time.sleep(0.3)
-	compute(0.3)
-	print "DistL : " , distance_L, ' m'
-	print "DistR : ", distance_R, ' m'
-	print "DistM : ", distance_M, ' m'

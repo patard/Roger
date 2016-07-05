@@ -88,7 +88,7 @@ def digitalRead(p_Pin):
     return val
 
 def digitalWrite(p_Pin, p_Value):
-    print "Envoi de digitalWrite", p_Pin, p_Value
+#    print "Envoi de digitalWrite", p_Pin, p_Value
     l_Param = p_Value | (p_Pin<<2)
     bus.write_i2c_block_data(address, DIGITAL_WRITE_MSG_ID, [ l_Param])
     
