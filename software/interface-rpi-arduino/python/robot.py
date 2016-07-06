@@ -2,11 +2,11 @@
  
 import interface_i2c
 
-encoder_left_Id = 0
+encoder_left_Id = 1
 encoder_left_A = 2
 encoder_left_B = 3
 
-encoder_right_Id = 1
+encoder_right_Id = 0
 encoder_right_A = 18
 encoder_right_B = 19
 
@@ -24,9 +24,9 @@ delta_T = 0.3
 
 
 def init() :
-  #definition des encodeurs
-  interface_i2c.sendEncodersettings( encoder_left_Id, encoder_left_A, encoder_left_B )
-  interface_i2c.sendEncodersettings( encoder_right_Id, encoder_right_A, encoder_right_B)
-
+	#definition des encodeurs
+	#interface_i2c.sendEncodersettings( encoder_left_Id, encoder_left_A, encoder_left_B )
+	interface_i2c.sendEncodersettings( encoder_right_Id, encoder_right_A, encoder_right_B)
+	print 'init done'
 
 

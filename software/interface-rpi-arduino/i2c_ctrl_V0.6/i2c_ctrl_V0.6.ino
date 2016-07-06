@@ -61,6 +61,7 @@ typedef struct EncoderStruct
   void (*ptr_InterruptB) (void); // callback associé au capteur B
   byte cptA, prevCptA; // Compteurs d'interruption A
   byte cptB, prevCptB; // Compteurs d'interruption B
+  bool reading;
 } EncoderStruct;
 
 EncoderStruct g_pEncoderTab[NB_ENCODER_MAX];
@@ -108,12 +109,10 @@ void setup() {
   g_pEncoderTab[1].ptr_InterruptA = &interruptA_1;
   g_pEncoderTab[1].ptr_InterruptB = &interruptB_1;
 
-  Serial.println("Pret");
 }
 
 void loop() {
-  delay(2000);
-  display_all_Encoder_info_light();
+  delay(100);
 }
 
 
@@ -136,9 +135,34 @@ void receiveData(int p_ByteCount) {
 // callback for sending data
 // ============================== //
 void sendData() {
+
+/*
+    l_pBuffer[0] = ENCODER_COUNTER_MSG_ID;
+    l_pBuffer[1] = ((g_EncoderCounterIdRequest << 5)  );
+    if (l_Counter < 0)
+    {
+      l_pBuffer[1] |= 0x10;
+      l_Counter *= -1;
+    }
+    l_pBuffer[1] |= ((l_Counter >> 8) & 0x0F);
+    l_pBuffer[2] = l_Counter & 0xFF;
+
+*/
+  
+
   if (g_OutputMsgSize)
     Wire.write(g_pOutputMsgBuf, g_OutputMsgSize);
   g_OutputMsgSize = 0;
+
+  // mise en place de la securite lors du reading
+  if (g_pOutputMsgBuf[0] == ENCODER_COUNTER_MSG_ID)
+  {
+//  char l_tmp = g_pOutputMsgBuf[1];
+    g_pEncoderTab[g_EncoderCounterIdRequest].reading = false;
+    g_pEncoderTab[0].reading = false;
+    g_pEncoderTab[1].reading = false;
+  }
+
 }
 
 
@@ -241,55 +265,26 @@ void encoderItB(EncoderStruct* p_pEncoder)
 
 void interruptA_0()
 {
-  encoderItA(&(g_pEncoderTab[0]));
+  if (! g_pEncoderTab[0].reading)
+    encoderItA(&(g_pEncoderTab[0]));
 }
 
 void interruptB_0()
 {
-  encoderItB(&(g_pEncoderTab[0]));
+  if (! g_pEncoderTab[0].reading)
+    encoderItB(&(g_pEncoderTab[0]));
 }
 void interruptA_1()
 {
+  if (! g_pEncoderTab[1].reading)
   encoderItA(&(g_pEncoderTab[1]));
 }
 
 void interruptB_1()
 {
+if (! g_pEncoderTab[1].reading)
   encoderItB(&(g_pEncoderTab[1]));
 }
-
-
-
-void display_encoder_info(int p_Id)
-{
-  Serial.print("g_pEncoderTab["); Serial.print(p_Id); Serial.println("]");
-  Serial.print("\tId\t:"); Serial.println((g_pEncoderTab[p_Id]).Id);
-  Serial.print("\tpinA\t:"); Serial.print((g_pEncoderTab[p_Id]).pinA);  Serial.print("\tpinB\t:"); Serial.println((g_pEncoderTab[p_Id]).pinB);
-  Serial.print("\tcounter\t:"); Serial.println((g_pEncoderTab[p_Id]).tick_counter);
-}
-void display_encoder_info_light(int p_Id)
-{
-  Serial.print("Enc_"); Serial.print(p_Id); Serial.print(" ");
-  Serial.print((g_pEncoderTab[p_Id]).pinA);  Serial.print("/"); Serial.print((g_pEncoderTab[p_Id]).pinB);
-  Serial.print(" : "); Serial.println((g_pEncoderTab[p_Id]).tick_counter);
-}
-
-void display_all_Encoder()
-{
-  for (int i = 0;  i < NB_ENCODER_MAX; i++)
-  {
-    if (g_pEncoderTab[i].Id != -1)    display_encoder_info(g_pEncoderTab[i].Id);
-  }
-}
-void display_all_Encoder_info_light()
-{
-  for (int i = 0;  i < NB_ENCODER_MAX; i++)
-  {
-    if (g_pEncoderTab[i].Id != -1)    display_encoder_info_light(g_pEncoderTab[i].Id);
-  }
-  Serial.println();
-}
-
 
 
 
@@ -303,15 +298,16 @@ void defineEncoderMsg_received(byte* p_pData, int p_MsgSize)
   g_pEncoderTab[l_EncoderId].tick_counter = 0;
   g_pEncoderTab[l_EncoderId].cptA = g_pEncoderTab[l_EncoderId].prevCptA = 0;
   g_pEncoderTab[l_EncoderId].cptB = g_pEncoderTab[l_EncoderId].prevCptB = 0;
-  display_all_Encoder();
 
   pinMode(p_pData[2], INPUT_PULLUP);
   pinMode(p_pData[3], INPUT_PULLUP);
-
+  
+  g_pEncoderTab[l_EncoderId].reading = false;
+  
   attachInterrupt(digitalPinToInterrupt(p_pData[2]), g_pEncoderTab[l_EncoderId].ptr_InterruptA, CHANGE);
   attachInterrupt(digitalPinToInterrupt(p_pData[3]), g_pEncoderTab[l_EncoderId].ptr_InterruptB, CHANGE);
-  Serial.print("attachInterrupt "); Serial.println(p_pData[2]);
-  Serial.print("attachInterrupt "); Serial.println(p_pData[3]);
+//  Serial.print("attachInterrupt "); Serial.println(p_pData[2]);
+//  Serial.print("attachInterrupt "); Serial.println(p_pData[3]);
 }
 
 #define INPUT_PIN_MODE 0
@@ -387,6 +383,11 @@ void analogWriteMsg_received(byte* p_pData, int p_MsgSize)
 
 void getEncoderCounterMsg_received(byte* p_pData, int p_MsgSize)
 {
+     // mise en place de la securite lors du reading
+     g_pEncoderTab[g_EncoderCounterIdRequest].reading = true;
+     g_pEncoderTab[0].reading = true;
+     g_pEncoderTab[1].reading = true;
+
   // il faut determiner s'il s'agit de la requete ou de la demande de lecture
   if (p_MsgSize == 2)
   {
@@ -395,6 +396,7 @@ void getEncoderCounterMsg_received(byte* p_pData, int p_MsgSize)
   }
   else if (p_MsgSize == 1)
   {
+     
     // il s'agit de la demande de recuperation des datas
     byte l_pBuffer[2];
     int l_Counter = g_pEncoderTab[g_EncoderCounterIdRequest].tick_counter;
