@@ -32,6 +32,8 @@ while True:
 		print 'DistM : ', odometry.distance_M, ' m'
 		cmd_motor = pids.pid_dist(target_dist)
 		print 'cmd_motor ' , cmd_motor
+		if (cmd_motor <= 12) : 
+			cmd_motor = 0
 		time.sleep(0.01)
 		interface_i2c.analogWrite(robot.PWM_pin_right, cmd_motor)
 		interface_i2c.analogWrite(robot.PWM_pin_left, cmd_motor)
