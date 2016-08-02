@@ -64,11 +64,10 @@ def sendEncodersettings( p_IdEncoder, p_NoPinA, p_NoPinB ):
 def getEncoderCounter( p_IdEncoder):
 #    print "******************** Envoi de getEncoderCounter", p_IdEncoder
     counter = 0;
-#    bus.write_i2c_block_data(address, GET_ENCODER_COUNTER_MSG_ID,  [p_IdEncoder])
     bus.write_byte_data(address, GET_ENCODER_COUNTER_MSG_ID,  p_IdEncoder)
-    time.sleep(0.005)
+#    time.sleep(0.005)
     retour = bus.read_i2c_block_data(address, GET_ENCODER_COUNTER_MSG_ID)
-    time.sleep(0.005)
+#    time.sleep(0.005)
     
     counter =(retour[2]+ ((retour[1] & 0x0F) <<8))
     if (retour[1] & 0x10) :
@@ -89,7 +88,7 @@ def digitalRead(p_Pin):
 #    print "******************** Envoi de digitalRead", p_Pin
 #    bus.write_i2c_block_data(address, DIGITAL_READ_MSG_ID,  [p_Pin])
     bus.write_byte_data(address, DIGITAL_READ_MSG_ID, p_Pin)
-    time.sleep(0.005)
+#    time.sleep(0.005)
     
     retour = bus.read_i2c_block_data(address, DIGITAL_READ_MSG_ID)
     if ((retour[1] & 0x01) == 1) : val = "HIGH"
@@ -119,7 +118,7 @@ def analogRead(p_Pin):
     #print "********************Envoi de analogRead", p_Pin
 #    bus.write_i2c_block_data(address, ANALOG_READ_MSG_ID,  [p_Pin])
     bus.write_byte_data(address, ANALOG_READ_MSG_ID, p_Pin)
-    time.sleep(0.005)
+#    time.sleep(0.005)
     
     retour = bus.read_i2c_block_data(address, ANALOG_READ_MSG_ID)
     val = (retour[1] << 8) | retour[2]
