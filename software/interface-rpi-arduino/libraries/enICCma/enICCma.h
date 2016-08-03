@@ -20,8 +20,8 @@
 #define DIGITAL_READ_MSG_ID    0x02
 #define DIGITAL_WRITE_MSG_ID   0x03
 #define DIGITAL_WRITES_MSG_ID  0x04
-#define ANALOG_READ_MSG_ID   0x05
-#define ANALOG_WRITE_MSG_ID  0x06
+#define ANALOG_READ_MSG_ID     0x05
+#define ANALOG_WRITE_MSG_ID    0x06
 #define DEFINE_ENCODER_MSG_ID  0x07
 #define GET_ENCODER_COUNTER_MSG_ID 0x08
 #define GET_SOFT_VERSION_MSG_ID 0x09
@@ -54,6 +54,8 @@ class enICCma
 
   // @brief Encode le message IdlVersion
   static void encodeIdlVersionMsg(char** p_pData, int* p_pMsgSize);
+
+
 };
 
 //extern enICCma _enICCma;

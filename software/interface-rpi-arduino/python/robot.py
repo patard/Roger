@@ -25,6 +25,7 @@ wheel_distance = 0.265 # meters
 
 # constante des PID distance et cap
 Kp_Dist = 200.
+Kp_Dist = 300.
 Ki_Dist = 20.
 Kd_Dist = 0.
 
@@ -58,6 +59,8 @@ def backward_left() :
   interface_i2c.digitalWrite(wheel_direction_pin_left, 0);
 #################################################
 
+
+MAX_CMD = 100
 #################################################
 def backward_right() :
   interface_i2c.digitalWrite(wheel_direction_pin_right, 0);
@@ -65,18 +68,18 @@ def backward_right() :
 
 #################################################
 def set_cmd_motor_left(motor_cmd) :
-	if ( motor_cmd > 255 ) :
-		motor_cmd = 255
+	if ( motor_cmd > MAX_CMD ) :
+		motor_cmd = MAX_CMD
 	if ( motor_cmd <= 25 ) :
 		motor_cmd = 0	
-	interface_i2c.analogWrite(PWM_pin_left, motor_cmd);	
+	interface_i2c.analogWrite(PWM_pin_left, int(motor_cmd));	
 #################################################
 
 #################################################
 def set_cmd_motor_right(motor_cmd) :
-	if ( motor_cmd > 255 ) :
-		motor_cmd = 255
+	if ( motor_cmd > MAX_CMD ) :
+		motor_cmd = MAX_CMD
 	if ( motor_cmd <= 25 ) :
 		motor_cmd = 0
-	interface_i2c.analogWrite(PWM_pin_right, motor_cmd);	
+	interface_i2c.analogWrite(PWM_pin_right, int(motor_cmd));	
 #################################################
