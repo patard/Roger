@@ -70,7 +70,7 @@ def compute(delta_t, trace_activated):
 	distance_M = (g_cptL + g_cptR)/ robot.encoderResolution * robot.wheel_diameter * _PI_ /2
 	
 	cap_rad = ((g_cptR-g_cptL)/ robot.encoderResolution)*robot.wheel_diameter/robot.wheel_distance*_PI_
-	delta_cap_rad = ((cptR-cptL)/ robot.encoderResolution)*robot.wheel_diameter/robot.wheel_distance*_PI_
+	delta_cap_rad = ((cptL-cptR)/ robot.encoderResolution)*robot.wheel_diameter/robot.wheel_distance*_PI_
 	sum_delta_cap_rad += delta_cap_rad
 	
 	orientation_current [0] = orientation_prev[0] + delta_cap_rad;

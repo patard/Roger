@@ -28,17 +28,20 @@ MIN_MOTOR_CMD = 20  # commande min des moteurs
 
 # constante des PID distance et cap
 Kp_Dist = 200.
-Ki_Dist = 20.
-Kd_Dist = 50.
+Ki_Dist = 30.
+Kd_Dist = 75.
 
-
-#Kp_Cap = 75.
-#Ki_Cap = 8.
-#Kd_Cap = 2.
+Kp_Dist_abs = 200.
+Ki_Dist_abs = 30.
+Kd_Dist_abs = 75.
 
 Kp_Cap = 200.
 Ki_Cap = 20.
 Kd_Cap = 10.
+
+Kp_Cap_abs = 300.
+Ki_Cap_abs = 1.
+Kd_Cap_abs = 10.
 
 #################################################
 def init() :
