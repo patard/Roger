@@ -4,12 +4,11 @@
   Script permettant de piloter le deplacement du robot,
   dans un repere initialement auto-centre
 
-	 Usage move_to X [Y=0.] [Z=0.]
-		X : Abscisse en m
-		Y : Odonnee en m
-		Z : Cote en m
-			Y et Z sont optionnels
-
+  Usage move_to X [Y=0.] [Z=0.]
+	X : Abscisse en m
+	Y : Odonnee en m
+	Z : Cote en m
+	(Y et Z sont optionnels)
 """
 
 
@@ -36,8 +35,10 @@ def compute_dist(p_current_pos, p_target_pos) :
 
 #################################################
 def compute_cap(p_current_ori, p_current_pos, p_target_pos) :
-	l_cap = [0. ,  0., 0.]
+	l_cap = [0.,  0., 0.]
 	l_cap[0] = math.atan2(p_target_pos[0]-p_current_pos[0], p_target_pos[1]-p_current_pos[1])
+	if (l_Cap[0] < 0) : 
+		l_Cap[0] += 2.*_PI_			
 	
 	return l_cap
 #################################################
@@ -99,7 +100,6 @@ print 'target_position ' , target_position
 
 
 # initialisation
-
 robot.init()
 pid_dist = pids.PID_control(robot.Kp_Dist_abs, robot.Ki_Dist_abs, robot.Kd_Dist_abs)
 pid_cap = pids.PID_control(robot.Kp_Cap_abs, robot.Ki_Cap_abs, robot.Kd_Cap_abs)
@@ -133,8 +133,8 @@ while True:
 		error_cap = -(float(l_Cap[0]) + odometry.cap_rad);
 		if (error_cap < 0) :
 			error_cap += 2.*_PI_
-		if (l_Cap[0] < 0) : # TBD traiter l'erreur a la source : compute_cap
-			l_Cap[0] += 2.*_PI_			
+#		if (l_Cap[0] < 0) : # TBD traiter l'erreur a la source : compute_cap
+#			l_Cap[0] += 2.*_PI_			
 		print 'target   : position ' ,target_position, '\t distance(' , l_Distance, ') cap(', l_Cap[0]*180./_PI_, ' deg )'
 
 		# Calcul des commandes moteurs associees
