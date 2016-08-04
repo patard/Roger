@@ -1,5 +1,18 @@
 #!/usr/bin/python
 
+"""
+  Script permettant de piloter le deplacement du robot,
+  dans un repere initialement auto-centre
+
+	 Usage move_to X [Y=0.] [Z=0.]
+		X : Abscisse en m
+		Y : Odonnee en m
+		Z : Cote en m
+			Y et Z sont optionnels
+
+"""
+
+
 
 import sys
 import odometry
@@ -24,7 +37,6 @@ def compute_dist(p_current_pos, p_target_pos) :
 #################################################
 def compute_cap(p_current_ori, p_current_pos, p_target_pos) :
 	l_cap = [0. ,  0., 0.]
-#	l_cap[0] = math.atan2(p_current_pos[1]-p_target_pos[1], p_current_pos[0]-p_target_pos[0])
 	l_cap[0] = math.atan2(p_target_pos[0]-p_current_pos[0], p_target_pos[1]-p_current_pos[1])
 	
 	return l_cap
@@ -53,8 +65,18 @@ current_orientation = [0. , 0. , 0.] # rad
 
 
 # parse des arguments
-if (len(sys.argv) >= 2):  
-	target_position_X = float(sys.argv[1])
+if (len(sys.argv) == 1):  
+	print '\n==========================='
+	print ' Usage move_to X [Y=0.] [Z=0.]'
+	print '  X : Abscisse en m'
+	print '  Y : Odonnee en m'
+	print '  Z : Cote en m'
+	print '    Y et Z sont optionnels'
+	print '===========================\n'
+	sys.exit()
+	
+	
+target_position_X = float(sys.argv[1])
 if (len(sys.argv) >= 3):  
 	target_position_Y = float(sys.argv[2])
 if (len(sys.argv) >= 4):  
@@ -72,7 +94,6 @@ print 'Nb args :',  len(sys.argv)
 print 'ArgList :', str(sys.argv)
 print 'current_position ' , current_position
 print 'current_orientation ' , current_orientation
-
 print 'target_position ' , target_position
 
 
@@ -112,7 +133,7 @@ while True:
 		error_cap = -(float(l_Cap[0]) + odometry.cap_rad);
 		if (error_cap < 0) :
 			error_cap += 2.*_PI_
-		if (l_Cap[0] < 0) :
+		if (l_Cap[0] < 0) : # TBD traiter l'erreur a la source : compute_cap
 			l_Cap[0] += 2.*_PI_			
 		print 'target   : position ' ,target_position, '\t distance(' , l_Distance, ') cap(', l_Cap[0]*180./_PI_, ' deg )'
 
@@ -142,6 +163,7 @@ while True:
 			else : 
 				robot.forward_right()
 
+			# On applique les commandes moteurs
 	#		print ' => cmd_motors : ' , cmd_motor_left, ' ', cmd_motor_right
 			robot.set_cmd_motor_left(cmd_motor_left)
 			robot.set_cmd_motor_right(cmd_motor_right)
