@@ -1,3 +1,6 @@
+# geany python backup files
+*.pyc
+
 # Compiled Object files
 *.slo
 *.lo
