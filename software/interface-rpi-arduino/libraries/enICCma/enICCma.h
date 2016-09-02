@@ -1,14 +1,13 @@
-/*
- enICCma.h
-
+/**
+ * @file enICCma.h
+ * @version 0.1
 */
 
 
 #ifndef enICCma_H_
 #define enICCma_H_
 
-
-#define MAJOR_SOFT_VERSION 0
+#define MAJOR_SOFT_VERSION 0 /**< Composante majeur du numéro de version */
 #define MINOR_SOFT_VERSION 6
 
 #define MAJOR_IDL_VERSION 0
@@ -43,16 +42,57 @@
 #define PULLUP_PIN_MODE 2
 
 
+
+/**
+| Right | Center | Left  |
+| ----: | :----: | :---- |
+| 10    | 10     | 10    |
+| 1000  | 1000   | 1000  |
+
+ */
+
+/**
+\dot
+digraph structs {
+node [shape=record, fontname = "courier"];
+struct [label="{b7-b0|0xF8 } | { {b7|b6|b5}|IdEncoder}| { {b4|b3|b2|b1|b0|b7|b6|b5|b4|b3|b2|b1|b0}|Value}"];
+}
+\enddot
+*/
+
+/**
+\dot
+digraph structs {
+node [shape=record];
+struct [fontname = "courier",label="{b7-b0|0xF8 } | { {b7|b6|b5}|IdEncoder}| { {b4|b3|b2|b1|b0|b7|b6|b5|b4|b3|b2|b1|b0}|Value}"];
+}
+\enddot
+*/
+
+/**
+\msc
+a [label="Maitre"],b [label="Esclave"];
+---  [label="envoi de donnees"];
+a->b [label="setData(...)"];
+b=>b [label="register data"];
+...;
+---  [label="demande de donnees"];
+a->b [label="data resquest(...)"];
+b=>b [label="recover data"];
+b->a [label="requested data"];
+\endmsc
+*/
+
 class enICCma
 {
    public:
-  // @brief Decode le message PinMode
+  /** @brief Decode le message PinMode */
   static bool decodePinModeMsg(char* p_pData, int p_MsgSize, int* p_pPin, char* p_pMode);
 
-  // @brief Decode le message AnalogWrite
+  /** @brief Decode le message AnalogWrite*/
   static bool decodeAnalogWriteMsg(char* p_pData, int p_MsgSize, int* p_pPin, char* p_pValue);
 
-  // @brief Encode le message IdlVersion
+  /** @brief Encode le message IdlVersion*/
   static void encodeIdlVersionMsg(char** p_pData, int* p_pMsgSize);
 
 

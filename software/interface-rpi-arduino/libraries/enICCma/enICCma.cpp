@@ -1,31 +1,20 @@
-/*
- enICCma.cpp
-
+/**
+ * @file enICCma.cpp
 */
 
 
 #include "enICCma.h"
-/*
-enICCma _enICCma;
-
-enICCma::enICCma()
-{
-
-  m_Val = 2; 
-}
-
-void enICCma::test()
-{
-m_Val++;
-}
-*/
 
 
-/* @brief Decode le message PinMode
+#define IDL_VERSION_BUFFER_SIZE 2
+char g_pIdlVersionBuffer[IDL_VERSION_BUFFER_SIZE];
+
+
+/**
 *  @param [in] p_pData : buffer contenant le message a decoder
 *  @param [in] p_MsgSize : taille du message a decoder
 *  @param [out] p_pPin : pointeur sur la valeur de pin decodee
-*  @param [out] p_pValkue : pointeur sur la valeur de de mode decodee
+*  @param [out] p_pMode : pointeur sur la valeur de mode decodee
 *                (Input/Output/Pullup)
 *
 *  @return true si decodage reussi, false sinon
@@ -47,9 +36,10 @@ bool enICCma::decodePinModeMsg(char* p_pData,
 
   return l_success;
 }
+///** @htmlinclude DataStructure.txt */
 
-
-/* @brief Decode le message AnalogWrite
+/**
+*  @brief Decode le message AnalogWrite
 *  @param [in] p_pData : buffer contenant le message a decoder
 *  @param [in] p_MsgSize : taille du message a decoder
 *  @param [out] p_pPin : pointeur sur la valeur de pin decodee
@@ -68,10 +58,38 @@ bool enICCma::decodeAnalogWriteMsg(char* p_pData,
   return true;
 }
 
-#define IDL_VERSION_BUFFER_SIZE 2
-char g_pIdlVersionBuffer[IDL_VERSION_BUFFER_SIZE];
-/* @brief Encode le message IdlVersion
-*
+
+
+
+/**
+ * @page IDL_VERSION
+ * # Message IDL_VERSION
+ * - Registre : __0xFC__
+ * - Attributs :
+ *   -# Major : Entier non signé sur 4 bits [0;15]
+ *   -# Minor : Entier non signé sur 4 bits [0;15]
+ *
+ * \n
+<table >
+<tr style="border:2px solid black">
+	<td style="border:2px solid black"> B7-B0
+	<td>B7<td>B6<td>B5<td>B4<td>B3<td>B2<td>B1<td>B0
+<tr style="border:2px solid black">
+	<td style="border:2px solid black">0xFC
+	<td colspan="4"  align="center">Major
+	<td colspan="4"  align="center">Minor
+</table>
+* \n
+* ### Fonctions associées :
+* @ref enICCma::encodeIdlVersionMsg pour l'encodage dans un buffer.\n
+* @ref enICCma::decodeIdlVersionMsg pour decoder un buffer.
+*/
+
+
+
+
+/**
+* Voir la page \ref IDL_VERSION pour la définition de la structure de données.
 */
 void enICCma::encodeIdlVersionMsg(char** p_pData, int* p_pMsgSize)
 {
